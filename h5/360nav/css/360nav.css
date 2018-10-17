@@ -1,0 +1,76 @@
+html,body,div,p,ul,li,dl,dt,dd,em,i,span,a,img,input,h1,h2,h3,h4,h5 {margin:0;padding:0}
+a,img,input {border:none;}
+body{font: 14px/1.75  -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif;-webkit-tap-highlight-color: rgba(0,0,0,0);}
+a {text-decoration:none;}
+ul,li{list-style: none}
+a, img {-webkit-touch-callout: none; /* 禁止长按链接与图片弹出菜单 */}
+html, body {
+    -webkit-user-select: none;   /* 禁止选中文本（如无文本选中需求，此为必选项） */
+    user-select: none;
+}
+
+
+/*START CSS*/
+html,body{ height:100%; }
+body{ background: #f7f7f7 url(../images/navi_bg.png) repeat-x left -94px; color:#666; font-size:14px; }
+img{ max-width: 100%; }
+
+.xi-container{
+    height: 100%; 
+    /*background:#f2f2f2;  
+    width: 640px; */
+    margin:0 auto; position:relative;
+}
+.xi-container .main-wrap{
+    background: #ccc;
+    margin:12px;
+}
+
+/*navtoolsbar*/
+.navtoolsbar{
+    position:fixed; bottom:-14px; z-index: 9999;
+    margin:0 12px;
+}
+.navtoolsbar img{ max-width:100%;  }
+
+/*xi-footer*/
+.xi-footer{ padding-bottom:100px; text-align:center; }
+
+.a-blockd{ margin-top:15px; }
+.a-blockd a{ display:block; overflow:hidden; border-radius: 2px; }
+.a-blockd img{ vertical-align:top; }
+
+
+.plate-b{
+    background: #fff;
+    border: 1px solid #eaebed;
+    border-color: #f00;
+    border-radius: 3px;
+    margin-top:15px;
+}
+.col4,.col5{ display:flex; flex-wrap:wrap;  }
+.col4 a{ width: 25%; text-align: center; color: #666; height: 36px; line-height: 36px; }
+.col5 a{ width:20%; text-align:center; color:#666; height:40px; line-height:40px; }
+
+.plate-one .first{
+    border-bottom:1px dashed #dcdcdc;
+}
+.plate-one .first a{ position:relative; padding-left:5%; width:20%; }
+
+
+.pic-title{ border:1px solid #eaebed; height:30px; line-height:30px; padding:10px 12px; }
+.pic-title .more{ float:right; color:#19B53A; }
+.pic-title h2{ float:left; color:#000; font-size:16px; }
+.news-cont{ padding:20px 0; }
+.bt{ color:#19B53A!important; }d
+.hot{ color:#f00!important; }
+
+
+
+.ify-cont{ padding:12px 0; }
+.ify-cont hr{ height:1px; background:#eaebed; overflow:hidden; margin: 5px 20px; border:0; }
+
+
+
+
+

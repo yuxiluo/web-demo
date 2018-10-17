@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>弹性布局</title>
+    <style>
+    *{ margin:0; padding:0; }
+    .flex-wrap{
+        width: 600px; margin:20px auto; border:1px dashed #ccc; min-height: 100px;
+    }
+    .wrap{ display: flex; flex-wrap: wrap; justify-content: center; }
+    .wrap .item{ display:block; background:#f00; margin-right:10px; padding: 10px; order: 0;  }
+    </style>
+</head>
+<body>
+
+
+<div class="flex-wrap">
+    <div class="wrap">
+        <div class="item">10</div>
+        <div class="item">你</div>
+        <div class="item">1</div>
+        <div class="item">你好吗</div>
+        <div class="item">你好吗，朋友</div>
+        <div class="item">你好吗，朋友。嘿</div> 
+    </div>
+
+</div>
+
+    
+</body>
+</html>

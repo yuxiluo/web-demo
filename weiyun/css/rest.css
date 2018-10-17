@@ -1,0 +1,73 @@
+/*重置项目默认样式*/
+@charset "utf-8";
+html {
+	overflow-x: hidden;
+	font-family: -apple-system,BlinkSystemFont,"Segoe UI",Roboto,Ubuntu,"Helvetica Neue",Helevetica,Arial,"PingFang SC","Hiragino Sans GB","Microsoft YaHei UI","Microsoft YaHei","Source Han Sans CN",sans-serif
+}
+body,html {
+	height: 100%;
+	overflow: hidden
+}
+blockquote,body,code,dd,div,dl,dt,fieldset,figure,form,h1,h2,h3,h4,h5,h6,input,legend,li,ol,p,pre,td,textarea,th,ul {
+	margin: 0;
+	padding: 0;
+	outline: 0
+} 
+ol,ul {	list-style: none; }
+a {
+	text-decoration: none;
+	color: #020202;
+	outline: 0
+}
+.sllips{ text-overflow: ellipsis; white-space: nowrap; word-wrap: normal; overflow:hidden; }
+
+.clearfix::after{display:block;content: "";clear: both; } 
+
+
+/*公共样式*/
+
+/*checkbox*/
+.icon-checkbox{
+	display:inline-block; 
+	width:18px; height:18px; 
+	position:relative; top:5px;
+	background: url(../images/icon-checkbox.svg) no-repeat;
+	cursor: default!important;
+}
+.icon-checkbox:hover{
+	background: url(../images/icon-checkbox-hover.svg) no-repeat;
+}
+.icon-checkboxed,.icon-checkboxed:hover{
+	background: url(../images/icon-checkbox-cur.svg) no-repeat;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

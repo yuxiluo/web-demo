@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>本地存储</title>  
+    <link rel="stylesheet" href="../../script/shCore.css">
+    <link rel="stylesheet" href="../../script/shCoreDefault.css">
+</head>
+<body>
+<div class="wrap-width">
+Web存储功能是让网页在用户计算机上保存一些信息。<br />
+1). 本地保存 - localStorage 对象 ( IE8 及以上支持 )<br />
+用于长期保存网站的数据，并且站内任何页面都可以访问该数据。<br />
+<pre class="brush:js;"> 
+存储: 
+localStorage.setItem('key', 'value');
+
+读取:
+localStorage.getItem('key');
+
+移除:
+localStorage.removeItem('key');
+
+移除所有:
+localStorage.clear();
+</pre>
+<br />
+封装函数:
+<pre class="brush:js;"> 
+// 当数据以对象的形式保存和读取可以通过JSON编码转换来实现。
+JSON.stringify(); 
+// 把JSON对象转换成JSON字符串
+var userInfo = { name: 'yuxi', age: 10 };
+JSON.stringify(userInfo);
+// '{ "name": "yuxi", "age": 10 }'
+
+JSON.parse(); 
+// 把JSON字符串转换成JSON对象
+var userInfo= '{ "name": "yuxi", "age": 10 }';
+JSON.parse(userInfo);
+// { "name": 'yuxi', "age": 10 }
+
+// 本地存储的增、删、改、查方法
+var loStorage = {
+    // 存储
+    setStorage: function(key, value){
+        localStorage.setItem(key, JSON.stringify(value));
+    },
+    // 读取
+    getStorage: function(key){
+        return JSON.parse(localStorage.getItem(key)) || [];
+    },
+    // 删除一个或多个
+    removeStorage: function(key){
+        if(key){
+            localStorage.removeItem(key);
+            return;
+        }
+        localStorage.clear();
+    }
+}
+</pre>
+<br />
+
+2). 会话存储 - sessionStorage 对象 ( IE8 及以上支持 )<br />
+用于临时保存正对一个窗口(或标签页)的数据。在关闭窗口或者标签页之前，这些数据是存在的，而关闭之后就会被浏览器删除。<br />
+方法使用和 本地存储一样, 只需要把 localStorage 修改成 sessionStorage即可。<br />
+
+
+    
+
+</div>
+</body>
+</html> 
+ 
+<script type="text/javascript" src="../../script/shCore.js"></script> 
+<script type="text/javascript" src="../../script/shBrushJScript.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.all(); 
+</script>

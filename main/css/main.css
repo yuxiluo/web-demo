@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* CSS Document */ 
+html{ overflow-y:scroll; }
+body, html{
+    height:100%; line-height:1.5; font-size:14px;
+    font-family: Helvetica, Arial, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif,"宋体"; 
+}     
+body{ margin:0; zoom:1; }
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, p {
+    padding:0; margin:0;
+}
+ol,ul{ list-style:none; }
+img{ vertical-align:top; border:0; }
+a{ text-decoration: none; color:#5c5c5c; }
+a img{ border:0; }
+h1, h2, h3, h4, h5, h6 { font-size:12px; font-weight:normal; display:block; } 
+.clearfix::after{  clear:both; content: ""; display:block; }
+.clearfix{ clear: both; } 
+.fl{ float: left;}
+.fr{ float: right; }
+.text-center{ text-align:center; }
+.sllips{ text-overflow: ellipsis; white-space: nowrap; word-wrap: normal; overflow:hidden; }
+
+/* START CSS */ 
+.xi-container{
+    position: relative; min-height: 100%;  background:#f1f1f1;
+    padding-top: 50px;
+}
+.xi-plateauto{ width: 1180px; margin:0 auto; height: 100%; }
+/* HEADER CSS */
+.xi-header{
+    height:50px; background:#323436; color: #cecece; 
+    position: fixed; top: 0; width:100%;
+}
+    .xi-header .xi-plateauto{ width: 92%; }
+    .xi-header .logo{ height: 34px; float: left; overflow: hidden; margin-top:8px; }
+    .xi-header .logo .txt{
+        width: 34px; display: block; background: #f60; border-radius: 4px;
+        font-family: Georgia; color: #fff; float: left;
+        font-size: 24px; text-align: center; line-height: 34px; font-weight: 700;
+    } 
+    .xi-header .logo .name{
+        color: #e4e4e4; float: left; font-size: 24px; font-family: Verdana; padding: 0 12px;
+    } 
+    .xi-header .mainnav li{ 
+        float: left; height:100%; position: relative;
+    }
+    .xi-header .mainnav li a{
+        color:#cecece; line-height:50px; padding:0 15px; font-size:15px;
+    }
+    .xi-header .mainnav li span{
+        position: absolute; width:100%; height:3px; background:#f60;
+        left:0; bottom:0; display: none;
+    }
+    .xi-header .mainnav .active span{ display: block; }
+    .xi-header .mainnav li:hover a,
+    .xi-header .mainnav .active a{ color:#f60; }
+
+    /* gray */
+    .header-gray .xi-plateauto{ width:auto; padding-left:12px;  }
+
+/* FOOTER CSS */
+.xi-footer{
+    position:absolute; bottom:0; background:#323436;
+    height:50px; line-height: 50px; width: 100%; color:#989898; 
+    font-size: 13px; text-align: center;
+}
+
+/* MAINWRAP CSS */
+.xi-mainwrap{ padding-bottom:50px; }
+
+/* CASE LIST */
+.xi-caseitems{ padding-top:20px; }
+.xi-caseitems ul{ margin-left:-20px; }
+.xi-caseitems li{
+    float: left;
+    width: 280px;
+    height: 230px;
+    margin: 0 0 20px 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: #fff;
+    display: inline; 
+}
+.xi-caseitems li:hover{
+    box-shadow: 0 0 10px 0px #ccc;
+} 
+.xi-caseitems li img{ display: block; width: 280px; height: 160px; vertical-align: top; }
+.xi-caseitems li h2{
+    height: 24px; margin: 10px 0 5px; font-size: 12px; font-weight: 500; text-align: center;
+    overflow: hidden; padding: 0 10px;
+}
+.xi-caseitems li p{ height: 24px; line-height: 24px; margin: 0 10px; font-size: 12px; color: #bfbfbf; }
+.xi-caseitems li p .time{ float: left; }
+.xi-caseitems li p .view{ float: right; }
+.xi-caseitems li p .view span{ margin-left:5px; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
