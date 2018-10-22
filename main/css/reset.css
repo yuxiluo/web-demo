@@ -1,0 +1,65 @@
+@charset "utf-8";
+/* 默认样式重置 */
+html{ overflow-y:scroll; }
+body, html{
+    height:100%; line-height:1.5; font-size:14px;
+    font-family: Helvetica, Arial, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif,"宋体"; 
+}
+body{ margin:0; zoom:1; }
+div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, blockquote, p {
+    padding:0; margin:0;
+}
+ol,ul{ list-style:none; }
+img{ vertical-align:top; border:0; }
+a{ text-decoration: none; color:#5c5c5c; }
+a img{ border:0; }
+h1, h2, h3, h4, h5, h6 { font-size:12px; font-weight:normal; display:block; } 
+
+/* CSS 常用样式 */
+.clearfix::after{  clear:both; content: ""; display:block; }
+.clearfix{ clear: both; } 
+.fl{ float: left;}
+.fr{ float: right; }
+.text-center{ text-align:center; }
+.sllips{ text-overflow: ellipsis; white-space: nowrap; word-wrap: normal; overflow:hidden; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
