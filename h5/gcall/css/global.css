@@ -5,15 +5,13 @@ a, a:hover{ color: #1258a8; }
 .icon-bar{ background: url(../icon/bar.png) no-repeat; background-size: 6rem 1rem; }
 /* 布局 */
 .g-mainwrap{
-    width: 7.5rem; 
-    padding: 0.81rem 0;
+    width: 7.5rem; height: 100%;
     margin: 0 auto; 
-    height: 100%;
     overflow: auto;
     box-sizing: border-box;
 }
 .g-main-container{ 
-    padding: 0.8rem 0 0.72rem;
+    padding: 0.81rem 0; 
     /* 使之可以滚动 */
     overflow-y: scroll;
     /* 增加该属性，可以增加弹性 */
@@ -22,12 +20,9 @@ a, a:hover{ color: #1258a8; }
 
 /* Top Bar */
 .g-topbar{
-    position: fixed;
-    top: 0; left: 0; right: 0; z-index: 10;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    height:0.8rem;
+    position: fixed; top: 0;  z-index: 10;
+    width: 100%; height:0.8rem;
+    display: flex; justify-content: space-between; align-items: center; 
     background: #285894;
     padding: 0 0.83rem; 
     border-bottom: 1px solid #cfd3d7;
@@ -56,9 +51,10 @@ a, a:hover{ color: #1258a8; }
 
 /* Botton Bar */
 .g-bootombar{
-    position: fixed; bottom: 0; left: 0; right: 0; z-index: 10;
+    position: fixed; bottom: 0; z-index: 10;
+    width: 100%; height: 0.72rem; 
     display: flex; justify-content: space-around;
-    padding-top: 0.08rem; height: 0.72rem; 
+    padding-top: 0.08rem;
     background: #fff; border-top:1px solid #e3e3e3; 
 } 
     .g-bootombar .bar{  
