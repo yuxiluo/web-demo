@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="main/css/style01.css" />
     <script src="h5/script/mobile.js"></script>
     <style> 
-    html, body{ width: 100%; height: 100%; padding: 0; }
+    html, body{ width: 100%; height: 100%; padding: 0; overflow-x: hidden }
     .wrap{
         height: 100%; position: relative;
     }
@@ -21,9 +21,9 @@
     .main{
         /* position: absolute; top: 0.8rem; bottom: 0.5rem;  */
         width: 100%;
-        padding: 0.8rem 0 0.5rem;
+        margin: 0.8rem 0 0.5rem;
         /* 使之可以滚动 */
-        overflow-y: scroll;
+        overflow-y: auto;
         /* 增加该属性，可以增加弹性 */
         -webkit-overflow-scrolling: touch;
     }
