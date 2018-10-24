@@ -1,6 +1,6 @@
 
 html{ font-size: 100px; background:#ecf2f8; }
-html, body{ width: 100%; height: 100%; overflow: hidden; }
+html, body{ width: 100%; height: 100%; }
 a, a:hover{ color: #1258a8; }
 .icon-bar{ background: url(../icon/bar.png) no-repeat; background-size: 6rem 1rem; }
 /* 布局 */
