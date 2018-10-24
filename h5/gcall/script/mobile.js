@@ -17,7 +17,8 @@
     win.addEventListener('load', setFont, false);
 
     // 阻止PC默认事件
-    // win.addEventListener('touchstart', function(ev) {
-    //     ev.preventDefault();
-    // });
+    var gMainwrap = document.getElementsByClassName('g-mainwrap');
+    gMainwrap.addEventListener('touchstart', function(ev) {
+        ev.preventDefault();
+    });
 })(window, document);
