@@ -12,13 +12,12 @@ a, a:hover{ color: #1258a8; }
     overflow: auto;
     box-sizing: border-box;
 }
-.g-main{
-    position: absolute; top: 0.8rem; bottom: 0.72rem;
+.g-main-container{ 
+    padding: 0.8rem 0 0.72rem;
     /* 使之可以滚动 */
     overflow-y: scroll;
     /* 增加该属性，可以增加弹性 */
-    -webkit-overflow-scrolling: touch;
-    background: #f00;
+    -webkit-overflow-scrolling: touch; 
 }
 
 /* Top Bar */
