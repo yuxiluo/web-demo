@@ -1,6 +1,6 @@
 
 html{ font-size: 100px; background:#ecf2f8; }
-html, body{ width: 100%; height: 100%; overflow-x: hidden; }
+html, body{ width: 100%; height: 100%; }
 a, a:hover{ color: #1258a8; }
 .icon-bar{ background: url(../icon/bar.png) no-repeat; background-size: 6rem 1rem; }
 /* 布局 */
@@ -8,13 +8,11 @@ a, a:hover{ color: #1258a8; }
     width: 7.5rem; height: 100%;
     margin: 0 auto; 
     overflow: auto;
-    box-sizing: border-box;
-    position: relative;
+    box-sizing: border-box; 
 }
 .g-main-container{  
     /* position: absolute; top: 0.81rem; bottom: 0.81rem; */
-    padding: 0.81rem 0;
-    background: #f00;
+    padding: 0.81rem 0; 
     /* 使之可以滚动 */
     overflow-y: scroll;
     /* 增加该属性，可以增加弹性 */
