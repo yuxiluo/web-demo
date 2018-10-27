@@ -17,8 +17,9 @@
     win.addEventListener('load', setFont, false);
 
     // 阻止PC默认事件
-    var gMainwrap = document.getElementsByClassName('g-mainwrap');
-    gMainwrap.addEventListener('touchmore', function(ev) {
-        ev.preventDefault();
+    var gMainwrap = document.getElementsByClassName('g-mainwrap')[0]; 
+    gMainwrap.addEventListener('click', function(ev) {
+        var ev = ev || window.event;
+        ev.preventDefault(); 
     });
 })(window, document);
