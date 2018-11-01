@@ -1,4 +1,4 @@
-# Copy过来的, 仅仅只是Wie了访问的时候方便看
+# Copy过来的, 仅仅只是为了访问的时候更方便
 
 原文博客地址：[https://xiaohuazheng.github.io/2016/10/01/awesome-frontend-resource/][1] 
 
