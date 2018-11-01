@@ -196,21 +196,6 @@ gulp.task('revCollector', function() {
 // 相对路径会出现问题, 写路径的时候必须从根目录开始
 ```
 
-**gulp-zip 把文件打成压缩包**
-```JavaScript
-// 1. 安装插件
-npm install gulp-zip --save-dev
-
-// 2. 在任务gulpfile.js中引入插件 
-var zip = require('gulp-zip');
-
-gulp.task('zip', function() {
-    gulp.src('build/**/*')
-        .pipe( zip('build.zip') )
-        .pipe( gulp.dest('./') );
-});
-```
-
 **gulp-uglify JS压缩丑化**
 ```JavaScript
 // 1. 安装插件
@@ -248,14 +233,100 @@ gulp.task('cssmin', function() {
 });
 ```
 
+**gulp-htmlmin 压缩HTML文件**
+```JavaScript
+// 可以压缩页面上的javascript、css, 去除页面空格、注释、删除多余属性等操作
+
+// 1. 安装插件
+npm install gulp-htmlmin --save-dev
+
+// 2. 在任务gulpfile.js中引入插件
+var htmlmin = require('gulp-htmlmin');
+
+gulp.task('htmlmin', function() {
+    return gulp.src('build/**/*.html')
+        .pipe( htmlmin({
+            removeComments: true, // 清除HTML注释
+            collapseWhitespace: true, // 压缩HTML
+            collapseBooleanAttributes: true, // 省略布尔属性的值 <input checked="true" /> => <input />
+            removeEmptyAttributes: true, // 删除所有空格作属性值 <input id="" /> => <input />
+            removeScriptTypeAttributes: true, // 删除<script>的type="text/javascript"
+            removeStyleLinkTypeAttributes: true, // 删除<style>和<link>的type="text/css"
+            minifyJS: true, // 压缩页面JS
+            minifyCSS: true // 压缩页面CSS
+        }) )
+        .pipe( gulp.dast('build') );
+});
+```
+
+**gulp-sequence 按顺序逐个同步地运行任务**
+```JavaScript
+// task 任务里必须加上return, 不然还是会异步执行;
+
+// 1. 安装插件
+npm install gulp-sequence --save-dev
+
+// 2. 在任务gulpfile.js中引入插件 
+var sequence = require('gulp-sequence');
+
+// 任务A
+gulp.task('A', function(cd) {
+    return cd();
+});
+
+// 任务B
+gulp.task('B', function(cd) {
+    return cd();
+});
+
+// 任务C
+gulp.task('C', function(cd) {
+    return cd();
+});
+
+// 任务D
+gulp.task('D', function(cd) {
+    return cd();
+});
+
+// 任务E
+gulp.task('E', function(cd) {
+    return cd();
+});
+
+// sequence方法中的[]表示并行(异步)执行的任务
+// 用法1
+gulp.task('sequence-1', sequence(['A', 'B'], 'C', ['D', 'E']));
+// 'A'和'B'并行运行, 完成之后运行'C'任务, 在'C'任务完成之后并行运行'D'和'E'任务
+
+// 用法2
+gulp.task('sequence-2', function(cd) {
+    sequence(['A', 'B'], 'C', ['D', 'E'], cd);
+    // 或
+    sequence(['A', 'B'], 'C', ['D', 'E'])(cd);
+});
+
+```
+
+**gulp-zip 把文件打成压缩包**
+```JavaScript
+// 1. 安装插件
+npm install gulp-zip --save-dev
+
+// 2. 在任务gulpfile.js中引入插件 
+var zip = require('gulp-zip');
+
+gulp.task('zip', function() {
+    gulp.src('build/**/*')
+        .pipe( zip('build.zip') )
+        .pipe( gulp.dest('./') );
+});
+```
 
 
 
 
 
 
-
-
-
-
-
+#### 参考资料
+[Gulp使用小结](https://www.cnblogs.com/Darren_code/p/gulp.html)
